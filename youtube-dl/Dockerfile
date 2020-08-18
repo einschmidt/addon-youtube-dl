@@ -1,10 +1,5 @@
-#
-# youtube-dl Server Dockerfile
-#
-# https://github.com/manbearwiz/youtube-dl-server-dockerfile
-#
-
-FROM python:alpine
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 RUN apk add --no-cache \
   ffmpeg \
@@ -18,8 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /usr/src/app
 
-EXPOSE 8080
-
-VOLUME ["/youtube-dl"]
+EXPOSE 2021
 
 CMD [ "python", "-u", "./youtube-dl-server.py" ]
