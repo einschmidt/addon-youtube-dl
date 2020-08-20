@@ -13,7 +13,7 @@ ARG BUILD_VERSION
 RUN apk add --no-cache --allow-untrusted \
     --repository http://nl.alpinelinux.org/alpine/edge/community \
     tzdata \
-  	ffmpeg \
+    ffmpeg \
     youtube-dl
 
 # Copy root filesystem
