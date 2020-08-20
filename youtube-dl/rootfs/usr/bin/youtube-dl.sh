@@ -11,7 +11,6 @@ main() {
     URL=$(bashio::config 'URL')
 
     # Run youtube-dl
-    ${CADDY_PATH} run --config ${CONFIG_PATH} ${ARGS}
     youtube-dl ${OPTIONS} ${URL}
 }
 main "$@"
