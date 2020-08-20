@@ -10,10 +10,11 @@ ARG BUILD_REF
 ARG BUILD_VERSION
 
 # Install requirements for add-on
-RUN apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/community --allow-untrusted \
-    tzdata \
-  	ffmpeg=4.3.1-r0 \
-    youtube-dl=2020.07.28-r0
+RUN apk --no-cache --repository http://nl.alpinelinux.org/alpine/edge/community --allow-untrusted \
+    update \
+    add tzdata \
+  	add ffmpeg \
+    add youtube-dl
 
 # Copy root filesystem
 COPY rootfs /
