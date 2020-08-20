@@ -10,7 +10,7 @@
     "map": ["share:rw"],
     "options": {
         "Options": [],
-        "URL": "https://mnmedias.api.telequebec.tv/m3u8/29880.m3u8",
+        "URL": "",
         "log_level": "info"
     },
     "schema": {
