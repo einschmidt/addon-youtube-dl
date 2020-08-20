@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # Install requirements for add-on
-RUN apk add --no-cache \
+RUN apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/community --allow-untrusted \
     tzdata \
   	ffmpeg=4.3.1-r0 \
     youtube-dl=2020.07.28-r0
