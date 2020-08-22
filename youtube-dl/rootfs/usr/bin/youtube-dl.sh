@@ -12,5 +12,6 @@ main() {
 
     # Run youtube-dl
     youtube-dl ${OPTIONS} ${URL}
+    $(bashio::exit.ok)
 }
 main "$@"
