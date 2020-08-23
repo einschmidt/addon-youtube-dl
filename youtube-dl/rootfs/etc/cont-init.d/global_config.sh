@@ -13,5 +13,5 @@ echo "\# Configuration" > ${GLOBAL_CONFIG}
 # Add all global options to the configuration
 for var in $(bashio::config 'global_options|keys'); do
   echo "$(bashio::config "global_options[${var}]") >> "${GLOBAL_CONFIG}"
-  bashio::log.info "$(bashio::config "global_options[${var}]")
+  bashio::log.info "$(bashio::config "global_options[${var}]")"
 done
