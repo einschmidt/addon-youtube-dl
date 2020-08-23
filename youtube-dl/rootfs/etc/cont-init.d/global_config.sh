@@ -3,12 +3,12 @@
 # Home Assistant Add-on: youtube-dl
 # Creates the global configuration file
 # ==============================================================================
-declare global_config=/etc/youtube-dl.conf
+declare GLOBAL_CONFIG="/etc/youtube-dl.conf"
 
 bashio::log.info "Create global configuration file
 
 # Start creation of configuration
-echo "\# Configuration" > "${GLOBAL_CONFIG}"
+echo "\# Configuration" > ${GLOBAL_CONFIG}
 
 # Add all global options to the configuration
 for var in $(bashio::config 'global_options|keys'); do
