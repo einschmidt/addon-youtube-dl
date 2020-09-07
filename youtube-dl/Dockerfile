@@ -16,7 +16,7 @@ RUN apk add tzdata \
 # Install requirements for add-on
 RUN apk add --no-cache --allow-untrusted \
             --repository http://nl.alpinelinux.org/alpine/edge/community \
-            youtube-dl
+            youtube-dl=2020.09.06-r0
 
 # Copy root filesystem
 COPY rootfs /
