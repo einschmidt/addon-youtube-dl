@@ -39,7 +39,7 @@ jobs:
         uses: home-assistant/builder@master
         with:
           args: |
-            --test
+            --test \
             --no-latest \
             --all \
             --target /data/youtube-dl \
