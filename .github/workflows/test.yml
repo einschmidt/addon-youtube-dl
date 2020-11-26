@@ -46,4 +46,7 @@ jobs:
             --docker-hub ${{ secrets.DOCKERHUB_USERNAME }} \
             --image youtube-dl-{arch} \
             --self-cache \
-            --cache-tag test
+            --cache-tag test \
+            --version edge \
+            --release edge \
+            --release-tag
