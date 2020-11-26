@@ -40,4 +40,4 @@ jobs:
             --image youtube-dl-{arch} \
             --version test \
             --release test2 \
-            --release-tag test3
+            --release-tag test
