@@ -38,4 +38,6 @@ jobs:
             --target /data/youtube-dl \
             --docker-hub berichta \
             --image youtube-dl-{arch} \
-            --version test
+            --version test \
+            --release test2 \
+            --release-tag test3
