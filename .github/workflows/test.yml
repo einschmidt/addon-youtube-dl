@@ -39,9 +39,11 @@ jobs:
         uses: home-assistant/builder@master
         with:
           args: |
+            --test
             --no-latest \
             --all \
             --target /data/youtube-dl \
             --docker-hub ${{ secrets.DOCKERHUB_USERNAME }} \
             --image youtube-dl-{arch} \
-            --version test
+            --self-cache \
+            --cache-tag test
