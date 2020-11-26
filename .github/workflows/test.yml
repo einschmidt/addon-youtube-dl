@@ -26,18 +26,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      # Login to DockerHub
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       # Test build
       - name: Test build
         uses: home-assistant/builder@master
         with:
           args: |
-            --test \
             --no-latest \
             --all \
             --target /data/youtube-dl \
-            --docker-hub berichta \
+            --docker-hub ${{ secrets.DOCKERHUB_USERNAME }} \
             --image youtube-dl-{arch} \
-            --version test \
-            --release test2 #\
-            #--release-tag test
+            --version test
