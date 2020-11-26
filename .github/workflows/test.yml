@@ -39,5 +39,5 @@ jobs:
             --docker-hub berichta \
             --image youtube-dl-{arch} \
             --version test \
-            --release test2 \
-            --release-tag test
+            --release test2 #\
+            #--release-tag test
