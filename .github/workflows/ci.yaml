@@ -40,5 +40,4 @@ jobs:
       - name: 🚀 Run Add-on Lint
         uses: frenck/action-addon-linter@v1.3.1
         with:
-          community: true
           path: "./${{ needs.information.outputs.target }}"
