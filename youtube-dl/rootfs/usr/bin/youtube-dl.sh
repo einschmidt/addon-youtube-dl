@@ -11,6 +11,6 @@ main() {
     URL=$(bashio::config 'URL')
 
     # Run youtube-dl
-    youtube-dl ${OPTIONS} ${URL}
+    youtube-dl "${OPTIONS}" "${URL}"
 }
 main "$@"
