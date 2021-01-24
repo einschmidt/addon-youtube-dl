@@ -11,10 +11,10 @@ jobs:
   version:
     name: Generate version
     runs-on: ubuntu-latest
-    
+
     outputs:
       version: ${{ steps.version.outputs.version }}
-      
+
     steps:
       - name: Set version
         id: version
@@ -22,7 +22,7 @@ jobs:
           version=$(date --utc '+%Y-%m-%d-%H-%M')
           echo "Version: ${version}"
           echo "::set-output name=version::${version}"
-          
+
   build:
     name: Build dev and push to Docker
     needs: version
@@ -54,7 +54,7 @@ jobs:
       - version
       - build
     runs-on: ubuntu-latest
-    
+
     steps:
       - run: |
           echo Version: ${{ needs.version.outputs.version }}
