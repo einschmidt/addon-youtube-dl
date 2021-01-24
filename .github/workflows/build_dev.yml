@@ -52,7 +52,7 @@ jobs:
 
   repository:
     name: Update Dev repository
-    needs: 
+    needs:
       - version
       - build
     runs-on: ubuntu-latest
