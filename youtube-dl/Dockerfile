@@ -1,4 +1,5 @@
 ARG BUILD_FROM
+# hadolint ignore=DL3006
 FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
@@ -10,10 +11,12 @@ ARG BUILD_REF
 ARG BUILD_VERSION
 
 # Install basics
-RUN apk add tzdata \
-            ffmpeg
+RUN apk add --no-cache \
+            tzdata=2020f-r0 \
+            ffmpeg=4.3.1-r3
 
 # Install requirements for add-on
+# hadolint ignore=DL3018
 RUN apk add --no-cache --allow-untrusted \
             --repository http://nl.alpinelinux.org/alpine/edge/community \
             youtube-dl
