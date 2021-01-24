@@ -1,11 +1,13 @@
 
 # youtube-dl
 
-youtube-dl is a command-line program to download videos from YouTube.com and a few [more sites](http://ytdl-org.github.io/youtube-dl/supportedsites.html).
+youtube-dl is a command-line program to download videos from YouTube.com 
+and a few [more sites](http://ytdl-org.github.io/youtube-dl/supportedsites.html).
 
 ## About
 
-This add-on provides a simple youtube-dl integration, allowing to download youtube videos or others.
+This add-on provides a simple youtube-dl integration, allowing to 
+download youtube videos or others.
 
 # Installation
 
@@ -19,12 +21,16 @@ Then install the "youtube-dl" add-on.
 
 # Default output location
 
-By default, this add-on uses an output option which will store download files under `/share/youtube-dl/`. The output folder will be created automatically.
-However, this option can be overwritten via `options` and setting the '-o' option. See [OUTPUT TEMPLATE](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#output-template) for further information.
+By default, this add-on uses an output option which will store download files 
+under `/share/youtube-dl/`. The output folder will be created automatically.
+However, this option can be overwritten via `options` and setting the '-o' 
+option. See [OUTPUT TEMPLATE](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#output-template) 
+for further information.
 
 # Default Stop
 
-The add-on will stop itself after successful download or in case an error occured. This is intended behavior.
+The add-on will stop itself after successful download or in case 
+an error occured. This is intended behavior.
 
 # Configuration
 
@@ -42,9 +48,11 @@ log_level: info
 ### Option: `options`
 
 Allows you to specify additional youtube-dl options.
-Add one or more options to the list, and they will be executed with the start of this add-on.
+Add one or more options to the list, and they will be executed 
+with the start of this add-on.
 
-**Note**: The output option `-o` is preconfigured but can be overwritten here as well!
+**Note**: The output option `-o` is preconfigured but can be 
+overwritten here as well!
 
 ### Option: `URL`
 
