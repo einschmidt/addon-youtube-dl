@@ -1,7 +1,7 @@
 # youtube-dl
 
 youtube-dl is a command-line program to download videos from YouTube.com
-and a few [more sites](http://ytdl-org.github.io/youtube-dl/supportedsites.html).
+and a few [more sites][supported-sites].
 
 ## About
 
@@ -14,7 +14,7 @@ Add this repository to your [Hass.io](https://home-assistant.io/hassio/) instanc
 
 `https://github.com/berichta/hassio-addons`
 
-If you have trouble you can follow the [official docs](https://home-assistant.io/hassio/installing_third_party_addons/).
+If you have trouble you can follow the [official docs][addon-docs].
 
 Then install the "youtube-dl" add-on.
 
@@ -24,7 +24,7 @@ By default, this add-on uses an output option which will store download files
 under `/share/youtube-dl/`. The output folder will be created automatically.
 However, this option can be overwritten via `options` and setting the '-o'
 option.
-See [OUTPUT TEMPLATE](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#output-template)
+See [OUTPUT TEMPLATE][output-template]
 for further information.
 
 # Default Stop
@@ -75,3 +75,7 @@ Please note that each level automatically includes log messages from a
 more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
+
+[supported-sites]: http://ytdl-org.github.io/youtube-dl/supportedsites.html
+[addon-docs]: https://home-assistant.io/hassio/installing_third_party_addons/
+[output-template]: https://github.com/ytdl-org/youtube-dl/blob/master/README.md#output-template
