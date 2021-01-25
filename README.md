@@ -8,7 +8,7 @@ and a few [more sites][supported-sites].
 This add-on provides a simple youtube-dl integration, allowing to
 download youtube videos or others.
 
-# Installation
+## Installation
 
 Add this repository to your [Hass.io](https://home-assistant.io/hassio/) instance:
 
@@ -18,7 +18,7 @@ If you have trouble you can follow the [official docs][addon-docs].
 
 Then install the "youtube-dl" add-on.
 
-# Default output location
+## Default output location
 
 By default, this add-on uses an output option which will store download files
 under `/share/youtube-dl/`. The output folder will be created automatically.
@@ -27,12 +27,12 @@ option.
 See [OUTPUT TEMPLATE][output-template]
 for further information.
 
-# Default Stop
+## Default Stop
 
 The add-on will stop itself after successful download or in case
 an error occured. This is intended behavior.
 
-# Configuration
+## Configuration
 
 Example add-on configuration:
 
