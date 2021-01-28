@@ -4,12 +4,6 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-# Build arguments
-ARG BUILD_ARCH
-ARG BUILD_DATE
-ARG BUILD_REF
-ARG BUILD_VERSION
-
 # Install basics
 RUN apk add --no-cache \
             tzdata=2020f-r0 \
@@ -24,20 +18,31 @@ RUN apk add --no-cache --allow-untrusted \
 # Copy root filesystem
 COPY rootfs /
 
+# Build arguments
+ARG BUILD_ARCH
+ARG BUILD_DATE
+ARG BUILD_DESCRIPTION
+ARG BUILD_NAME
+ARG BUILD_REF
+ARG BUILD_REPOSITORY
+ARG BUILD_VERSION
+
 # Labels
 LABEL \
-    io.hass.name="youtube-dl" \
-    io.hass.description="youtube-dl addon" \
+    io.hass.name="${BUILD_NAME}" \
+    io.hass.description="${BUILD_DESCRIPTION}" \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Berichta" \
-    org.label-schema.description="youtube-dl addon" \
-    org.label-schema.build-date=${BUILD_DATE} \
-    org.label-schema.name="youtube-dl" \
-    org.label-schema.schema-version="1.0" \
-    org.label-schema.url="https://github.com/berichta/hassio-addons" \
-    org.label-schema.usage="https://github.com/berichta/hassio-addons/blob/master/youtube-dl/README.md" \
-    org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/berichta/hassio-addons" \
-    org.label-schema.vendor="Berichta"
+    maintainer="Einschmidt" \
+    org.opencontainers.image.title="${BUILD_NAME}" \
+    org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
+    org.opencontainers.image.vendor="Einschmidt" \
+    org.opencontainers.image.authors="einschmidt" \
+    org.opencontainers.image.licenses="MIT" \
+    org.opencontainers.image.url="https://google.com" \
+    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
+    org.opencontainers.image.created=${BUILD_DATE} \
+    org.opencontainers.image.revision=${BUILD_REF} \
+    org.opencontainers.image.version=${BUILD_VERSION}
