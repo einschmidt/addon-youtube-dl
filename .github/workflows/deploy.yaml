@@ -141,7 +141,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v1.1.3
         with:
           token: ${{ secrets.MY_GITHUB_TOKEN }}
-          repository: einschmidt/hassio-addons-dev
+          repository: einschmidt/hassio-addons-edge
           event-type: update
           client-payload: >
             {
@@ -166,7 +166,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v1.1.3
         with:
           token: ${{ secrets.MY_GITHUB_TOKEN }}
-          repository: einschmidt/hassio-addons-dev
+          repository: einschmidt/hassio-addons-beta
           event-type: update
           client-payload: >
             {
@@ -189,7 +189,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v1.1.3
         with:
           token: ${{ secrets.MY_GITHUB_TOKEN }}
-          repository: einschmidt/hassio-addons-dev
+          repository: einschmidt/hassio-addons
           event-type: update
           client-payload: >
             {
