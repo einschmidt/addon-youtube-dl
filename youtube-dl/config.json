@@ -1,9 +1,9 @@
 {
   "name": "youtube-dl",
-  "version": "0.0.22",
+  "version": "edge",
   "slug": "youtube-dl",
   "description": "Download videos from youtube.com and a few more sites",
-  "url": "https://github.com/berichta/hassio-addons",
+  "url": "https://github.com/einschmidt/addon-youtube-dl",
   "arch": ["armhf", "armv7", "amd64", "aarch64", "i386"],
   "startup": "once",
   "boot": "manual",
