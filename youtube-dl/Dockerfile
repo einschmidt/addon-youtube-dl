@@ -6,7 +6,7 @@ ENV LANG C.UTF-8
 
 # Install basics
 RUN apk add --no-cache \
-            tzdata=2020f-r0 \
+            tzdata=2021a-r0 \
             ffmpeg=4.3.1-r3
 
 # Install requirements for add-on
