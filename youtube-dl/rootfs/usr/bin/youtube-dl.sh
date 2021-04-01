@@ -11,6 +11,13 @@ main() {
     URL=$(bashio::config 'URL')
 
     # Run youtube-dl
-    youtube-dl "${OPTIONS}" "${URL}"
+    if bashio::config.has_value 'options'; then
+        bashio::log.info "Run: youtube-dl '${OPTIONS}' '${URL}'"
+        youtube-dl "${OPTIONS}" "${URL}"
+    else
+        bashio::log.notice "No options found"
+        bashio::log.info "Run: youtube-dl '${URL}'"
+        youtube-dl "${URL}"
+    fi
 }
 main "$@"
