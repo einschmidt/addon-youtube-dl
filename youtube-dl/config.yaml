@@ -1,6 +1,6 @@
 ---
 name: youtube-dl
-version: edge
+version: dev
 slug: youtube-dl
 description: Download videos from youtube.com and a few more sites
 url: 'https://github.com/einschmidt/addon-youtube-dl'
