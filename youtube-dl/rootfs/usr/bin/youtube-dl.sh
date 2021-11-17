@@ -27,7 +27,7 @@ main() {
     if bashio::config.true 'STDIN_mode'; then
         bashio::log.info "Starting in STDIN_mode..."
 
-        while read url; do
+        while read -r url; do
             url="${url%\"}"
             url="${url#\"}"
 
