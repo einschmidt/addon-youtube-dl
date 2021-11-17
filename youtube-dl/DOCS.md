@@ -56,7 +56,7 @@ The URL of the video file.
 ### Option: `STDIN_mode`
 
 Enables the STDIN_mode. When enabled, will #not# download the configured `URL`.
-Instead of, the addon will keep running and expects input via the 
+Instead of, the addon will keep running and expects input via the
 `hassio.addon_stdin` service.
 
 ### Option: `log_level`
@@ -81,7 +81,7 @@ you are troubleshooting.
 
 The following function requires the option `STDIN_mode` to be enabled!
 
-This add-on uses the `hassio.addon_stdin` service to expose an URL input 
+This add-on uses the `hassio.addon_stdin` service to expose an URL input
 interface to Home Assistant. This allows you to initiate a download within the
 youtube-dl add-on, straight from Home Assistant.
 
