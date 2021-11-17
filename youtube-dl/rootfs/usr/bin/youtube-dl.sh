@@ -37,7 +37,8 @@ main() {
         done < /proc/1/fd/0
 
     else
-        export URL=$(bashio::config 'URL')
+        URL=$(bashio::config 'URL')
+        export URL
         download
     fi
 }
