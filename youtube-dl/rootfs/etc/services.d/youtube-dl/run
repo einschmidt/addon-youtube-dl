@@ -7,22 +7,4 @@
 bashio::log.info 'Starting youtube-dl...'
 
 # Run youtube-dl
-if bashio::config.true 'STDIN_mode'; then
-    bashio::log.info "Starting in STDIN_mode..."
-    while read -r URL_STDIN; do
-        bashio::log.info "Received URL: ${URL_STDIN}"
-        export ${URL_STDIN}
-        exec /usr/bin/youtube-dl.sh
-    done
-else
-    exec /usr/bin/youtube-dl.sh
-fi
-
-
-
-
-
-
-
-
-
+exec /usr/bin/youtube-dl.sh
