@@ -8,7 +8,12 @@
 main() {
     bashio::log.trace "${FUNCNAME[0]}"
     OPTIONS=$(bashio::config 'options')
-    URL=$(bashio::config 'URL')
+
+    if bashio::config.true 'STDIN_mode'; then
+        URL=${URL_STDIN}
+    else
+        URL=$(bashio::config 'URL')
+    fi
 
     # Run youtube-dl
     if bashio::config.has_value 'options'; then
