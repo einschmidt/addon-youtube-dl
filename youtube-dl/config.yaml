@@ -12,6 +12,8 @@ arch:
   - i386
 startup: once
 boot: manual
+homeassistant_api: true
+stdin: true
 map:
   - "share:rw"
 options:
