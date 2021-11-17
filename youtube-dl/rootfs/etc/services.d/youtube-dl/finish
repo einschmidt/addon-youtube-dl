@@ -1,11 +1,11 @@
-#!/usr/bin/execlineb -S0
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Home Assistant Add-on: youtube-dl
 # Take down the S6 supervision tree when youtube-dl fails
 # ==============================================================================
 
-# Disable error cases because add-on show finish when done
-#if { s6-test ${1} -ne 0 }
-#if { s6-test ${1} -ne 256 }
-
-s6-svscanctl -t /var/run/s6/services
+if bashio::config.true 'STDIN_mode'; then
+    bashio::log.info 'STDIN service was stopped, restarting...'
+else
+    s6-svscanctl -t /var/run/s6/services
+fi
