@@ -28,8 +28,7 @@ schema:
     - str
   URL:
     - str
-  STDIN_mode:
-    - bool?
+  STDIN_mode: bool?
   log_level: list(trace|debug|info|notice|warning|error|fatal)
 environment:
   LOG_FORMAT: "{LEVEL}: {MESSAGE}"
