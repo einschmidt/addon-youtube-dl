@@ -59,7 +59,7 @@ The URL of the video file.
 
 Enables the STDIN_mode. When set to `true`, will ignore the configured `URL`.
 Instead of, the addon will keep running and expects input via the
-`hassio.addon_stdin` service. 
+`hassio.addon_stdin` service.
 
 ### Option: `log_level`
 
