@@ -7,13 +7,13 @@ ENV LANG C.UTF-8
 # Install basics
 RUN apk add --no-cache \
             tzdata=2021e-r0 \
-            ffmpeg=4.4.1-r0
+            ffmpeg=4.4.1-r2
 
 # Install requirements for add-on
 # hadolint ignore=DL3018
 RUN apk add --no-cache --allow-untrusted \
             --repository http://nl.alpinelinux.org/alpine/edge/community \
-            youtube-dl
+            youtube-dl=2021.06.06-r0
 
 # Copy root filesystem
 COPY rootfs /
