@@ -13,7 +13,7 @@ RUN apk add --no-cache \
 # hadolint ignore=DL3018
 RUN apk add --no-cache --allow-untrusted \
             --repository http://nl.alpinelinux.org/alpine/edge/community \
-            youtube-dl=2021.06.06-r0
+            youtube-dl=2021.12.17-r0
 
 # Copy root filesystem
 COPY rootfs /
