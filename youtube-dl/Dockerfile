@@ -7,7 +7,7 @@ ENV LANG C.UTF-8
 # Install basics
 RUN apk add --no-cache \
             tzdata=2023c-r0 \
-            ffmpeg=5.1.4-r0
+            ffmpeg=6.0.1-r0
 
 # Install requirements for add-on
 # hadolint ignore=DL3018
