@@ -1,3 +1,5 @@
+This repository will be archived. youtube-dl is no longer maintained, and so the same is going to happen with this repository.
+
 # youtube-dl
 
 youtube-dl is a command-line program to download videos from YouTube.com
